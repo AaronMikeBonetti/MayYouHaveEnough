@@ -1,0 +1,14 @@
+{
+  "name": "mayyouhaveenough",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MayYouHaveEnough.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Bonetti",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
