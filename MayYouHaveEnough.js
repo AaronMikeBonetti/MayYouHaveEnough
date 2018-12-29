@@ -1,19 +1,74 @@
 
-function myFunction() {
-	let x = document.querySelector(".main-nav");
-	;
-if(innerWidth > 960){
-    x.style.display = "none";
+
+
+
+function navToggle(){
+    
+    let mainNav = document.getElementById("main-nav");
+    mainNav.classList.toggle("nav-open")
+} 
+
+//:::::::::::::::::::Media Animations::::::::::::
+
+function displayToMain(num) {
+    
+    let mediaMain = document.getElementsByClassName("media-main")[0];
+   
+    let img = url => {
+        mediaMain.style.backgroundImage = `${url}` ;   
+        }
+    
+    let transition = () =>{
+    mediaMain.classList.add("media-transition") 
+    
+        setTimeout(function(){
+            mediaMain.classList.remove("media-transition")
+        }, 500)
+
+   }
+   transition()
+  
+imgsArray = [
+    {img: "url('Pics/colorado1.jpg')", id: 0},
+    {img: "url('Pics/colorado2.jpg')", id: 1},
+    {img: "url('Pics/colorado6.jpg')", id: 2},
+    {img: "url('Pics/colorado4.jpg')", id: 3},
+    {img: "url('Pics/colorado5.jpg')", id: 4},
+]
+
+for(imgs in imgsArray){
+    if(imgsArray.id = num + 1){
+        return img(imgsArray[num].img)
+    }
 }
-else{
-	if (x.style.display === "none") {
-		x.style.display = "block";
-	}
-	 else {
-		x.style.display = "none";
-	}
 }
+
+function ArrowImgChange(direction){
+
+    if(direction === "right"){
+        console.log("right!")
+    }
+    if(direction === "left"){
+        console.log("left!")
+    }
+    
+        // let mediaMain = document.getElementsByClassName("media-main")[0];
+
+        // for(imgs in imgsArray){
+        //     if(imgsArray.id = num + 1){
+        //         return img(imgsArray[num].img)
+        //     }
 }
+    
+    
+
+
+
+
+
+
+
+
 
 
 // Scroll on click events (keep in case of media queries)

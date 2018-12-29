@@ -16,9 +16,9 @@
 <!-- Tittle Page -->
 <nav class="sticky">
 		<div><img id="logo" alt="logo" onclick=" window.scrollTo(0,0)" src="./Pics/CornacopiaLogoTransparent.png"></div>
-		<button class="nav-toggler" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+		<button class="nav-toggler" onclick="navToggle()"><i class="fas fa-bars"></i></button>
 		<div class="row">
-			<ul class="main-nav">
+			<ul id="main-nav">
 				
 				<li  id="contact-btn" onclick=" window.scrollTo(0,3100)" >contact</li>
 				<li id="media-btn" onclick="window.scrollTo(0,1980)" >Media</li>
@@ -29,13 +29,6 @@
 		</div>
 	</nav>
 <header>
-
-
-	
-
-	
-	<div class="row">
-
 		<div class="header_box">
 			<h1><span>"</span>We Feed Hungry People<span>"</span></h1>
 			<a href="https://paypal.me/MayYouHaveEnough/5" class="btn donate_btn">DONATE</a>
@@ -75,13 +68,13 @@
 </section>
 <section class="media-grid">
 	<div class="media-main"></div>
-	<div class="main-right-arrow"><i class="fas fa-arrow-right"></i></div>
-	<div class="main-left-arrow"><i class="fas fa-arrow-left"></i></div>
-	<div class="sub-pic-1"></div>
-	<div class="sub-pic-2"></div>
-	<div class="sub-pic-3"></div>
-	<div class="sub-pic-4"></div>
-	<div class="sub-pic-5"></div>
+	<div onclick="ArrowImgChange('right')" class="main-right-arrow"><i class="fas fa-arrow-right"></i></div>
+	<div onclick="ArrowImgChange('left')" class="main-left-arrow"><i class="fas fa-arrow-left"></i></div>
+	<div onclick="displayToMain(0)" class="sub-pic-1"></div>
+	<div onclick="displayToMain(1)" class="sub-pic-2"></div>
+	<div onclick="displayToMain(2)" class="sub-pic-3"></div>
+	<div onclick="displayToMain(3)" class="sub-pic-4"></div>
+	<div onclick="displayToMain(4)" class="sub-pic-5"></div>
 </section>
 
 
@@ -93,6 +86,7 @@
 	<div class="contact-border1"></div>
 	<div class="contact-border2"></div>
 	<div class="contact-container">
+		<div class="cornacopia"></div>
 	
 		<form action="https://formspree.io/aaronmbonetti@aol.com" method="POST">
 			<label id="email" for="email">Name:</label><br>

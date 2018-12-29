@@ -1,13 +1,21 @@
 {
   "name": "mayyouhaveenough",
   "version": "1.0.0",
-  "description": "",
+  "description": "May You Have Enough",
   "main": "MayYouHaveEnough.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "\"test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronMikeBonetti/MayYouHaveEnough.git"
   },
   "author": "Aaron Bonetti",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronMikeBonetti/MayYouHaveEnough/issues"
+  },
+  "homepage": "https://github.com/AaronMikeBonetti/MayYouHaveEnough#readme",
   "dependencies": {
     "express": "^4.16.4"
   }
