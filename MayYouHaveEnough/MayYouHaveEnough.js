@@ -40,6 +40,7 @@ function displayToMain(num) {
      }
 }
 
+
 //:::::::::::::Change Img based on current img and on a timer
 
 //function for finding what picture is currently in media main;

@@ -412,6 +412,7 @@ grid-gap: 40px;
 	transition: filter 0.4s;
 	filter: brightness(100%)
 }
+
 .sub-pic-1{	
 	display: grid;
 	grid-column: 2/3;
