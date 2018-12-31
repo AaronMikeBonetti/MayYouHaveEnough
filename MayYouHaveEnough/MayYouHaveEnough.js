@@ -1,3 +1,9 @@
+//:::::::::::::::::::Scroll To Animation::::::::::::
+
+
+
+
+
 //:::::::::::::::::::Nav Toggler Animation::::::::::::
 function navToggle(){
     
@@ -101,30 +107,32 @@ function displayToMain(num) {
 //:::::::::::Header Background Opacity on Scroll:::::::::::
 
 
+
+
 window.onscroll = function () {
     let header = document.getElementsByTagName("header")[0];
    
-    if(window.scrollY > 750){
+   
+        
+    if(window.scrollY > 700){
         header.classList.add("background-opacity")
     }
-    if(window.scrollY < 750){
+    if(window.scrollY < 700){
         header.classList.remove("background-opacity")
     }
-      
-}
-//:::::::::::Media Background Opacity on Scroll:::::::::::
-
-window.onscroll = function () {
-    let storyBackground = document.getElementsByClassName("media-scroll-background")[0];
+    let mediaGrid = document.getElementsByClassName("media-grid")[0];
    
-    if(window.scrollY < 3800){
-        storyBackground.classList.add("background-opacity")
+    if(window.scrollY < 3000){
+       mediaGrid.style.backgroundColor = "white"
     }
-    if(window.scrollY > 3900){
-        storyBackground.classList.remove("background-opacity")
+    if(window.scrollY > 3000){
+       mediaGrid.style.backgroundColor = "rgb(107, 107, 107)"
     }
       
 }
+// :::::::::::Media Background Opacity on Scroll:::::::::::
+
+
 
 
 
@@ -185,5 +193,32 @@ window.onscroll = function () {
 // 	 });;
 //    });
 
+function navScrollResponsive(){
 
+let listeners = ['load', 'resize']
+let contactBtn = "contact-btn"
+let mediaBtn = "media-btn"
+let storyBtn = "story-btn"
+
+function Onclick(element, y){ 
+     return document.getElementById(element).setAttribute("onclick",`window.scrollTo(0, ${y});`)} 
+
+listeners.forEach(function(e) {
+    window.addEventListener(e,function(){
+    
+        if(window.innerWidth < 970){
+         Onclick(contactBtn, 4150);
+         Onclick(mediaBtn, 2980);
+         Onclick(storyBtn, 950);
+        }
+        else{
+            Onclick(contactBtn, 3050);
+            Onclick(mediaBtn, 1930);
+            Onclick(storyBtn, 900);
+         }
+    
+    })
+});
+}
+navScrollResponsive()
 

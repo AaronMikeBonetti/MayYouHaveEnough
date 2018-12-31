@@ -66,7 +66,7 @@ header {
 }
 
 .background-transition {
-	transition: opacity ease-in-out .8s;
+	transition: opacity ease-in-out .3s;
 }
 
 .sticky{
@@ -347,6 +347,7 @@ background-color: white;
 grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 100px;
 grid-template-rows: 700px 300px 100px;
 grid-gap: 40px;
+transition: background-color ease-in-out .2s
 
 }
 .media-main{
