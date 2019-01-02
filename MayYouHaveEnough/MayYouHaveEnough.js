@@ -1,10 +1,6 @@
-//:::::::::::::::::::Scroll To Animation::::::::::::
-
-
-
-
 
 //:::::::::::::::::::Nav Toggler Animation::::::::::::
+
 function navToggle(){
     
     let mainNav = document.getElementById("main-nav");
@@ -104,23 +100,21 @@ function displayToMain(num) {
 // }
 
 
-//:::::::::::Header Background Opacity on Scroll:::::::::::
-
-
-
-
-window.onscroll = function () {
-    let header = document.getElementsByTagName("header")[0];
+// :::::::::::Media Background Opacity on Scroll:::::::::::
+function mediaBackgroundEffect(){
+window.addEventListener("scroll" , function(){
+    
+    
+    let header = document.getElementsByTagName("header")[0]; 
+    let mediaGrid = document.getElementsByClassName("media-grid")[0];
    
-   
-        
     if(window.scrollY > 700){
         header.classList.add("background-opacity")
     }
     if(window.scrollY < 700){
         header.classList.remove("background-opacity")
     }
-    let mediaGrid = document.getElementsByClassName("media-grid")[0];
+    
    
     if(window.scrollY < 3000){
        mediaGrid.style.backgroundColor = "white"
@@ -129,71 +123,11 @@ window.onscroll = function () {
        mediaGrid.style.backgroundColor = "rgb(107, 107, 107)"
     }
       
+});
 }
-// :::::::::::Media Background Opacity on Scroll:::::::::::
+// ::::::::::::::::::::Navagation Scroll Effect with Responsive Effect
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Scroll on click events (keep in case of media queries)
-
-// var logo = document.getElementById("logo")
-// var home = document.getElementById("home")
-// var storyBtn = document.getElementById("story-btn")
-// var mediaBtn = document.getElementById("media-btn")
-// var contactBtn = document.getElementById("contact-btn")
-
-// logo.addEventListener('click', function(){
-// 	window.scrollTo({
-// 	   top: 0,
-// 	   left: 0,
-// 	   behavior: 'smooth'
-// 	 });;
-//    });
-
-// home.addEventListener('click', function(){
-// 	window.scrollTo({
-// 	   top: 0,
-// 	   left: 0,
-// 	   behavior: 'smooth'
-// 	 });;
-//    });
-   
-// storyBtn.addEventListener('click', function(){
-// 	window.scrollTo({
-// 	   top: 900,
-// 	   left: 0,
-// 	   behavior: 'smooth'
-// 	 });;
-//    });
-// mediaBtn.addEventListener('click', function(){
-// 	window.scrollTo({
-// 	   top: 1980,
-// 	   left: 0,
-// 	   behavior: 'smooth'
-// 	 });;
-//    });
-   
-//    contactBtn.addEventListener('click', function(){
-// 	window.scrollTo({
-// 	   top: 3100,
-// 	   left: 0,
-// 	   behavior: 'smooth'
-// 	 });;
-//    });
-
-function navScrollResponsive(){
+function navScrollButtons(){
 
 let listeners = ['load', 'resize']
 let contactBtn = "contact-btn"
@@ -207,9 +141,9 @@ listeners.forEach(function(e) {
     window.addEventListener(e,function(){
     
         if(window.innerWidth < 970){
-         Onclick(contactBtn, 4150);
-         Onclick(mediaBtn, 2980);
-         Onclick(storyBtn, 950);
+            Onclick(contactBtn, 4150);
+            Onclick(mediaBtn, 2980);
+            Onclick(storyBtn, 950);
         }
         else{
             Onclick(contactBtn, 3050);
@@ -220,5 +154,12 @@ listeners.forEach(function(e) {
     })
 });
 }
-navScrollResponsive()
+// ::::::::::Timer Function for the Background Effect and for Scroll Effect
+
+function timer(){
+    navScrollButtons() 
+    setInterval(navScrollButtons, 1000)
+    setInterval(mediaBackgroundEffect, 5000)
+};
+timer()
 
