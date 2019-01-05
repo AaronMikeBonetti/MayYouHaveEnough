@@ -8,11 +8,11 @@ function navToggle(){
 
 //:::::::::::::::::::Media Animations::::::::::::
 var imgsArray = [
-    {url: "url('Pics/colorado1.jpg')", id: 0},
-    {url: "url('Pics/colorado2.jpg')", id: 1},
-    {url: "url('Pics/colorado6.jpg')", id: 2},
-    {url: "url('Pics/colorado4.jpg')", id: 3},
-    {url: "url('Pics/colorado5.jpg')", id: 4},
+    {url: "url('./Pics/colorado1.jpg')", id: 0},
+    {url: "url('./Pics/colorado2.jpg')", id: 1},
+    {url: "url('./Pics/colorado6.jpg')", id: 2},
+    {url: "url('./Pics/colorado4.jpg')", id: 3},
+    {url: "url('./Pics/colorado5.jpg')", id: 4},
 ]
 var mediaMain = document.getElementsByClassName("media-main")[0];  
 
