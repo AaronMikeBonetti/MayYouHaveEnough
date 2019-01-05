@@ -137,7 +137,7 @@ function Onclick(element, y){
 listeners.forEach(function(e) {
     window.addEventListener(e,function(){
     
-        if(window.innerWidth < 970){
+        if(window.innerWidth < 1270){
             Onclick(contactBtn, 5450);
             Onclick(mediaBtn, 2880);
             Onclick(storyBtn, 990);
