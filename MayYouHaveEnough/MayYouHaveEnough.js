@@ -21,15 +21,10 @@ var pushUrlToMain = url => {
     }
 var count = 0;
 
-function checkCount(){
-if(count >= 5){
-     return count = 0
-}
-if(count <= 0){
-     return count = 5
-}
-}
-checkCount()
+
+
+
+
 
 function transition(element){
     element.classList.add("media-transition") 
@@ -39,7 +34,7 @@ function transition(element){
 }
 
 function displayToMain(num) { 
-    checkCount()
+ 
     transition(mediaMain)
     
      for(imgs in imgsArray){
@@ -51,36 +46,8 @@ function displayToMain(num) {
      }
      
 }
-function ArrowImgChange(direction) { 
-    checkCount()
-     
-    transition(mediaMain)
-   
-    if(direction= "right"){
-     
-        for(imgs in imgsArray){
-        
-            if(mediaMain.style.backgroundImage = `url('Pics/colorado${count}.jpg')`){
-               
-                 pushUrlToMain(imgsArray[count++].url)
-                 count++
-                
-            }
-           
-        }
-     }
-    if(direction= "left"){
-     
-        for(imgs in imgsArray){
-            if(mediaMain.style.backgroundImage = `url('Pics/colorado${count}.jpg')`){
-                count--
-                 pushUrlToMain(imgsArray[count].url)
-                
-            }
-            
-        }
-     }
-}
+
+
 
 
 //:::::::::::::SlideShow::::::::::::::::://
@@ -88,8 +55,7 @@ function ArrowImgChange(direction) {
 
 
 function SlideShow(){
-    checkCount()
-    
+
     function runCarousel(){ 
 
     
@@ -102,7 +68,6 @@ function SlideShow(){
     pushUrlToMain(imgsArray[count].url)
     transition(mediaMain)
         count++
-        iteration++
       }  
       
     }
@@ -116,7 +81,7 @@ else{
 }
 }
 
-// SlideShow()
+SlideShow()
 
 
 
@@ -130,7 +95,16 @@ window.addEventListener("scroll" , function(){
     
     let header = document.getElementsByTagName("header")[0]; 
     let mediaGrid = document.getElementsByClassName("media-grid")[0];
+    let headerBox = document.getElementsByClassName("header_box")[0];
    
+    if(window.scrollY > 200){
+        headerBox.classList.add("fadeOutUp")
+        headerBox.classList.remove("fadeInDown")
+    }
+    if(window.scrollY < 200){
+        headerBox.classList.remove("fadeOutUp")
+        headerBox.classList.add("fadeInDown")
+    }
     if(window.scrollY > 700){
         header.classList.add("background-opacity")
     }
