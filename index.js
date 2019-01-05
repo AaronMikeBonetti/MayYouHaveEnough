@@ -96,7 +96,18 @@ window.addEventListener("scroll" , function(){
     let header = document.getElementsByTagName("header")[0]; 
     let mediaGrid = document.getElementsByClassName("media-grid")[0];
     let headerBox = document.getElementsByClassName("header_box")[0];
+    let donateBtn= document.getElementsByClassName("donate_btn")[0];
    
+    if(window.scrollY > 300){
+        donateBtn.classList.remove("fadeInLeft")
+        donateBtn.classList.add("fadeOutRight")
+        
+    }
+    if(window.scrollY < 300){
+        donateBtn.classList.remove("fadeOutRight")
+        donateBtn.classList.add("fadeInLeft")
+        
+    }
     if(window.scrollY > 300){
         headerBox.classList.add("fadeOutUp")
         headerBox.classList.remove("fadeInDown")
