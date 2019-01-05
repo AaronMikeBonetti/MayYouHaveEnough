@@ -97,11 +97,11 @@ window.addEventListener("scroll" , function(){
     let mediaGrid = document.getElementsByClassName("media-grid")[0];
     let headerBox = document.getElementsByClassName("header_box")[0];
    
-    if(window.scrollY > 200){
+    if(window.scrollY > 300){
         headerBox.classList.add("fadeOutUp")
         headerBox.classList.remove("fadeInDown")
     }
-    if(window.scrollY < 200){
+    if(window.scrollY < 300){
         headerBox.classList.remove("fadeOutUp")
         headerBox.classList.add("fadeInDown")
     }
