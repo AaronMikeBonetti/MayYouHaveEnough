@@ -1228,20 +1228,7 @@ footer p{
 		grid-template-rows: 80px 40px 1fr 40px 20px;
 	}
 
-	.cornacopia {
-		background-image: url(./Pics/CornacopiaLogoTransparent.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		opacity: .1;
-		position: absolute;
-		z-index: 3;
-		top: 3350px;
-		right: 0px;
-		height: 800px;
-		width: 60%;
-		margin-left: 50%;
-	}
+	
 
 	.contact-grid h2 {
 		position: initial;
@@ -1427,21 +1414,6 @@ footer p{
 		grid-template-rows: 80px 40px 1fr 40px 20px;
 	}
 
-	.cornacopia {
-		background-image: url(./Pics/CornacopiaLogoTransparent.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		opacity: .1;
-		position: absolute;
-		z-index: 3;
-		top: 3350px;
-		right: 0px;
-		height: 800px;
-		width: 60%;
-		margin-left: 50%;
-	}
-
 	.contact-grid h2 {
 		position: initial;
 		z-index: 1;
@@ -1511,7 +1483,7 @@ footer p{
 	}
 
 	.cornacopia {
-		top: 5800px;
+		top: 5700px;
 		width: 90%;
 		margin-right: 3%;
 	}
