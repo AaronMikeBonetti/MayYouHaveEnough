@@ -68,11 +68,11 @@ function mediaBackgroundEffect() {
             donateBtn.classList.add("fadeInLeft")
 
         }
-        if (window.scrollY > 300) {
+        if (window.scrollY > 250) {
             headerBox.classList.add("fadeOutUp")
             headerBox.classList.remove("fadeInDown")
         }
-        if (window.scrollY < 300) {
+        if (window.scrollY < 250) {
             headerBox.classList.remove("fadeOutUp")
             headerBox.classList.add("fadeInDown")
         }
