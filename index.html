@@ -7,8 +7,9 @@
 	<link href="./index.css" rel="stylesheet" type="text/css">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700" type="text/css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	 crossorigin="anonymous">
+
 	<title>May You Have Enough</title>
 	<link rel="shortcut icon" href="./Pics/CornacopiaLogoTransparent.png">
 
@@ -17,109 +18,118 @@
 
 <!-- Tittle Page -->
 <nav class="sticky">
-		<div><img id="logo" alt="logo" onclick=" window.scrollTo(0,0);" src="./Pics/CornacopiaLogoTransparent.png"></div>
-		<button class="nav-toggler" onclick="navToggle()"><i class="fas fa-bars"></i></button>
-		<div class="row">
-			<ul id="main-nav">
-				
-				<li  id="contact-btn" >contact</li>
-				<li id="media-btn" >Media</li>
-				<li id="story-btn" >Our Story</li>
-				<li id="home-btn" onclick="window.scrollTo(0,0)" > Home</li>
+	<div><img id="logo" alt="logo" onclick=" window.scrollTo(0,0);" src="./Pics/CornacopiaLogoTransparent.png"></div>
+	<button class="nav-toggler" onclick="navToggle()"><i class="fas fa-bars"></i></button>
+	<div class="row">
+		<ul id="main-nav">
 
-			</ul>
-		</div>
-	</nav>
+			<li id="contact-btn">contact</li>
+			<li id="media-btn">Media</li>
+			<li id="story-btn">Our Story</li>
+			<li id="home-btn" onclick="window.scrollTo(0,0)"> Home</li>
+
+		</ul>
+	</div>
+</nav>
 <header class="background-transition">
-		<div class="header_box">
-			<h1><span>"</span>We Feed Hungry People<span>"</span></h1>
-		</div>
-		<a href="https://paypal.me/MayYouHaveEnough/5" class="btn donate_btn">DONATE</a>
+	<div class="header_box">
+		<h1><span>"</span>We Feed Hungry People<span>"</span></h1>
+	</div>
+	<a href="https://paypal.me/MayYouHaveEnough/5" class="btn donate_btn">DONATE</a>
 	</div>
 </header>
-<body>
-<!-- Story and Testimonial Section -->
 
-<section class="story-grid">
+<body>
+	<!-- Story and Testimonial Section -->
+
+	<section class="story-grid">
 		<div class="story-container">
-			<div class="story"><h1>May You Have Enough</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis dolor eum laudantium cupiditate voluptatum possimus tenetur accusamus architecto quibusdam aut fuga animi sunt earum debitis atque quia facilis magni?</p>
+			<div class="story">
+				<h1>May You Have Enough</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis dolor eum laudantium cupiditate
+					voluptatum possimus tenetur accusamus architecto quibusdam aut fuga animi sunt earum debitis atque quia facilis
+					magni?</p>
 			</div>
 		</div>
 		<div class="mary">
-			<img src= ".\Pics\MarryAnn.jpg"class="testimonial-img">
+			<img src=".\Pics\MarryAnn.jpg" class="testimonial-img">
 		</div>
 		<div class="mary-quote">
-				<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam. <hr><span>-Marry Ann Bonetti</span></p>
-				
+			<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam.
+				<hr><span>-Marry Ann Bonetti</span></p>
+
 		</div>
-		  <div class="pam">
-			<img src= ".\Pics\pamala.jpg"class="testimonial-img">
+		<div class="pam">
+			<img src=".\Pics\pamala.jpg" class="testimonial-img">
 		</div>
 		<div class="pam-quote">
-				<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam.<hr><span>-Pamela McAlpin</span> </p>
+			<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam.
+				<hr><span>-Pamela McAlpin</span> </p>
 		</div>
 		<div class="greg">
-			<img src= "./Pics\greg.jpg"class="testimonial-img">
+			<img src="./Pics\greg.jpg" class="testimonial-img">
 		</div>
-		 <div class="greg-quote">
-				<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam. <hr><span>-Greg Bonetti</span></p>
+		<div class="greg-quote">
+			<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aperiam.
+				<hr><span>-Greg Bonetti</span></p>
 		</div>
 
 		<!-- Media Section		 -->
-	
-</section>
-<section class="media-grid">
 
-	<div class="media-main"></div>
-	<div onclick="displayToMain(0)" class="sub-pic-1"></div>
-	<div onclick="displayToMain(1)" class="sub-pic-2"></div>
-	<div onclick="displayToMain(2)" class="sub-pic-3"></div>
-	<div onclick="displayToMain(3)" class="sub-pic-4"></div>
-	<div onclick="displayToMain(4)" class="sub-pic-5"></div>
-	
-</section>
-
-
-<!-- Contact Section -->
-
-
-<section class="contact-grid">
-		<h2>Contact </h2>
-	<div class="contact-border1"></div>
-	<div class="contact-border2"></div>
-	<div class="contact-container">
-		<div class="cornacopia"></div>
-	
-		<form action="https://formspree.io/aaronmbonetti@aol.com" method="POST">
-			<label id="email" for="email">Name:</label><br>
-			
-			<input class="name" type="text" name="name"><br>
-			
-			<label id="email" for="email">Email:</label><br>
-			
-			<input class="email" type="email" name="_replyto"><br>
-			
-			<label for="subject">Subject:</label><br>
-			
-			<textarea id="subject" name="subject" placeholder="Tells us about yourself...." style="height:200px"></textarea><br><br>
-
-
-			<input id="submit-btn" type="Submit" value="Send">
-			<input id="reset-btn"type="reset" value="Reset">
-		  </form>
-		</div>
-	
 	</section>
-		  
+	<section class="media-grid">
 
-		  
+		<div class="media-main"></div>
+		<div onclick="displayToMain(0)" class="sub-pic-1"></div>
+		<div onclick="displayToMain(1)" class="sub-pic-2"></div>
+		<div onclick="displayToMain(2)" class="sub-pic-3"></div>
+		<div onclick="displayToMain(3)" class="sub-pic-4"></div>
+		<div onclick="displayToMain(4)" class="sub-pic-5"></div>
+
+	</section>
+
+
+	<!-- Contact Section -->
+
+
+	<section class="contact-grid">
+		<h2>Contact </h2>
+		<div class="contact-border1"></div>
+		<div class="contact-border2"></div>
+		<div class="contact-container">
+			<div class="cornacopia"></div>
+
+			<form action="https://formspree.io/aaronmbonetti@aol.com" method="POST">
+				<label id="email" for="email">Name:</label><br>
+
+				<input class="name" type="text" name="name"><br>
+
+				<label id="email" for="email">Email:</label><br>
+
+				<input class="email" type="email" name="_replyto"><br>
+
+				<label for="subject">Subject:</label><br>
+
+				<textarea id="subject" name="subject" placeholder="Tells us about yourself...." style="height:200px"></textarea><br><br>
+
+
+				<input id="submit-btn" type="Submit" value="Send">
+				<input id="reset-btn" type="reset" value="Reset">
+			</form>
+		</div>
+
+	</section>
+
+
+
 	<footer>
-		<p>Copyright <sup>&copy;</sup> 2018 by May You Have Enough. All rights reserved.</p>
+		<p> Copyright © 2019 by May You Have Enough. All rights reserved. </p>
 	</footer>
-	
-	
+
+
 
 
 </body>
 <script src=".\index.js"></script>
+
 </html>
