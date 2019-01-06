@@ -181,8 +181,21 @@ header {
 .fadeOutUp {
 	-webkit-animation-name: fadeOutUp;
 	animation-name: fadeOutUp;
+	-webkit-animation-duration: 1500ms;
 	animation-duration: 1500ms;
 	opacity: 0;
+}
+
+@-webkit-keyframes fadeOutUp {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
 }
 
 @keyframes fadeOutUp {
@@ -200,8 +213,23 @@ header {
 .fadeInDown {
 	-webkit-animation-name: fadeInDown;
 	animation-name: fadeInDown;
+	-webkit-animation-duration: 700ms;
 	animation-duration: 700ms;
 	opacity: 1;
+}
+
+@-webkit-keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 @keyframes fadeInDown {
@@ -248,6 +276,21 @@ header {
 	animation: pulse 2s infinite, fadeInLeft 700ms;
 }
 
+@-webkit-keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-200%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+}
+
 @keyframes fadeInLeft {
 	from {
 		opacity: 0;
@@ -269,6 +312,18 @@ header {
 	opacity: 0;
 }
 
+@-webkit-keyframes fadeOutRight {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+}
+
 @keyframes fadeOutRight {
 	from {
 		opacity: 1;
@@ -281,12 +336,26 @@ header {
 	}
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
 	0% {
+		-webkit-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
 		box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
 	}
 
 	100% {
+		-webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+		box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+		box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+	}
+
+	100% {
+		-webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
 		box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
 	}
 }
@@ -781,7 +850,7 @@ footer {
 	grid-template-rows: 20% 60% 20%;
 }
 
-footer p{
+footer p {
 	height: 100%;
 	width: 100%;
 	display: grid;
@@ -977,7 +1046,9 @@ footer p{
 		margin-right: 25%;
 	}
 
-	.mary, .pam, .greg{
+	.mary,
+	.pam,
+	.greg {
 		grid-column: 3/5;
 	}
 
@@ -1124,7 +1195,7 @@ footer p{
 
 
 
-	header {		
+	header {
 		grid-template-columns: 20% 60% 20%;
 		grid-template-rows: 30% 1fr 600px 20%;
 	}
@@ -1167,7 +1238,7 @@ footer p{
 		height: 90px;
 		padding-top: 20px;
 		font-size: 30px;
-		
+
 	}
 
 	.story-grid::after,
@@ -1180,7 +1251,7 @@ footer p{
 		margin-left: 80px;
 	}
 
-	.story h1{
+	.story h1 {
 		padding: 20px;
 	}
 
@@ -1198,6 +1269,7 @@ footer p{
 		width: 200px;
 
 	}
+
 	.mary,
 	.greg,
 	.pam {
@@ -1228,7 +1300,7 @@ footer p{
 		grid-template-rows: 80px 40px 1fr 40px 20px;
 	}
 
-	
+
 
 	.contact-grid h2 {
 		position: initial;
@@ -1271,8 +1343,7 @@ footer p{
 		border-right: 10px solid #1d575fce;
 	}
 
-	.contact-container form
-	 {
+	.contact-container form {
 		margin-left: 0px;
 		width: 100%;
 		font-size: 2rem;
@@ -1315,7 +1386,7 @@ footer p{
 
 @media (max-width: 600px) {
 
-	header {		
+	header {
 		grid-template-columns: 20% 60% 20%;
 		grid-template-rows: 10% 1fr 600px 20%;
 	}
@@ -1384,6 +1455,7 @@ footer p{
 		width: 150px;
 
 	}
+
 	.mary,
 	.greg,
 	.pam {
@@ -1455,8 +1527,7 @@ footer p{
 		border-right: 10px solid #1d575fce;
 	}
 
-	.contact-container form
-	 {
+	.contact-container form {
 		margin-left: 0px;
 		width: 100%;
 		font-size: 2rem;
@@ -1499,10 +1570,14 @@ footer p{
 	.story p {
 		font-size: 1.9rem;
 	}
-	.mary, .pam, .greg {
+
+	.mary,
+	.pam,
+	.greg {
 		grid-column: 2/3;
 		height: 20px;
 	}
+
 	.mary-quote,
 	.pam-quote,
 	.greg-quote {
@@ -1527,7 +1602,7 @@ footer p{
 		width: 10%;
 	}
 
-	header {		
+	header {
 		grid-template-columns: 20% 60% 20%;
 		grid-template-rows: 10% 1fr 400px 20%;
 	}
@@ -1536,11 +1611,12 @@ footer p{
 		grid-template-columns: 5% 20px 2fr 40px 200px 1fr 40px 5%;
 		grid-template-rows: 10px 60px 250px 20px 250px 20px 250px 80px 250px 80px 250px 80px 250px 50px;
 	}
-	.story-container{
+
+	.story-container {
 		grid-column: 2/8;
 	}
-	
-	.story h1{
+
+	.story h1 {
 		font-size: 3rem;
 		padding-bottom: 30px;
 	}
@@ -1550,7 +1626,9 @@ footer p{
 		padding: 5px;
 	}
 
-	.mary, .pam, .greg {
+	.mary,
+	.pam,
+	.greg {
 		grid-column: 2/3;
 		height: 20px;
 	}
@@ -1562,9 +1640,10 @@ footer p{
 		height: 100px;
 		width: 100px;
 	}
+
 	.mary,
 	.greg,
-	.pam  {
+	.pam {
 		grid-column: 1/3;
 	}
 
@@ -1583,7 +1662,7 @@ footer p{
 		text-align: center;
 		position: initial;
 		z-index: 3;
-		
+
 	}
 
 	#submit-btn {
@@ -1600,13 +1679,9 @@ footer p{
 		width: 50%;
 
 	}
-	
-	footer p{	
+
+	footer p {
 		font-size: 1.5rem;
 	}
 
 }
-
-
-
-
