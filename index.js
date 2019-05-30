@@ -99,23 +99,23 @@ function mediaBackgroundEffect() {
 
 
 var imgsArray = [{
-        url: "url('./Pics/colorado1.jpg')",
+        url: "url('./Pics/pam1.jpg')",
         id: 0
     },
     {
-        url: "url('./Pics/colorado2.jpg')",
+        url: "url('./Pics/supplys1.jpg')",
         id: 1
     },
     {
-        url: "url('./Pics/colorado6.jpg')",
+        url: "url('./Pics/greg1.jpg')",
         id: 2
     },
     {
-        url: "url('./Pics/colorado4.jpg')",
+        url: "url('./Pics/mary1.jpg')",
         id: 3
     },
     {
-        url: "url('./Pics/colorado5.jpg')",
+        url: "url('./Pics/greg2.jpg')",
         id: 4
     },
 ]
